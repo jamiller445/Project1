@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Events</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="reset.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="events.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+     
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="http://api.eventful.com/js/api"></script>
+    
+</head>
+<body >
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="../carousel/index.html">Nuevo</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="../sign-up/signup.html">Sign Up<span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../sign-in/index.html">Log In</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="events.html">Events</a>
+            </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="jumbotron jumbotron-fluid" style="background-color: rgba(0,0,0,0.5)">
+        <h1 class="display-4 text-center"><p class="font-weight-bold text-white">Events</p></h1>
+    </div>
+    <div style="background-color: rgba(0,0,0,0.5)">
+        <hr class="featurette-divider">
+
+        <!-- <div class="loader text-center"></div> -->
+        <div class="loading">
+                <div class="loader"></div>
+            </div>
+
+
+        <div class="row featurette pl-5">
+            <div class="col-md-7">
+              <h2 class="featurette-heading text-white" id="event-heading-0"><span class="text-white"></span></h2>
+              <!-- <h2 class="featurette-heading text-white" id="event-heading-1"><span class="text-white"></span></h2> -->
+              <p class="lead text-white" id="event-0"></p>
+                 <dl class="row">
+                    <!-- <dt class="lead text-white col-sm-1">Where:  </dt> -->
+                    <dt class="lead text-white col-sm-1" id="where-0"></dt>
+
+                        <dd class="col-sm-5">
+                            <p class="lead text-white" id="where00"></p>
+                            <p class="lead text-white" id="where10"></p>
+                            <p class="lead text-white" id="where20"></p>
+                        </dd> 
+                    <!-- <dt class="lead text-white col-sm-1">When:  </dt> -->
+                    <dt class="lead text-white col-sm-1" id="when-0"></dt>
+                        <dd class="col-sm-3">
+                            <p class="lead text-white" id="when00"></p>
+                            <p class="lead text-white" id="when10"></p>
+                            <p class="lead text-white" id="when20"></p>
+                        </dd>
+                </dl> 
+               
+            </div>
+            <div class="col-md-5">
+            <!-- <img class="featurette-image-1 img-fluid mx-auto" data-src="" alt="Generic placeholder image"> -->
+            <!-- <img class="featurette-image img-fluid mx-auto" id="event-img-0" src="" alt="Generic placeholder image"> -->
+            <img class="featurette-image rounded img-fluid mx-auto" id="event-img-0" src="">
+
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette pl-5">
+            <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading text-white" id="event-heading-1"> <span class="text-white"></span></h2>
+            <p class="lead text-white" id="event-1"></p>
+            <dl class="row">
+                <dt class="lead text-white col-sm-1" id="where-1"></dt>
+                    <dd class="col-sm-5">
+                        <p class="lead text-white" id="where01"></p>
+                        <p class="lead text-white" id="where11"></p>
+                        <p class="lead text-white" id="where21"></p>
+                    </dd> 
+                <dt class="lead text-white col-sm-1" id="when-1"></dt>
+                    <dd class="col-sm-3">
+                        <p class="lead text-white" id="when01"></p>
+                        <p class="lead text-white" id="when11"></p>
+                        <p class="lead text-white" id="when21"></p>
+                    </dd>
+            </dl>
+            </div>
+            <div class="col-md-5 order-md-1">
+            <!-- <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image"> -->
+            <img class="featurette-image rounded-circle img-fluid mx-auto" id="event-img-1">
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette pl-5">
+            <div class="col-md-7">
+            <h2 class="featurette-heading text-white" id="event-heading-2"><span class="text-white"></span></h2>
+            <p class="lead text-white" id="event-2"></p>
+            <dl class="row">
+                <dt class="lead text-white col-sm-1" id="where-2"></dt>
+                    <dd class="col-sm-5">
+                        <p class="lead text-white" id="where02"></p>
+                        <p class="lead text-white" id="where12"></p>
+                        <p class="lead text-white" id="where22"></p>
+                    </dd> 
+                <dt class="lead text-white col-sm-1" id="when-2"></dt>
+                    <dd class="col-sm-3">
+                        <p class="lead text-white" id="when02"></p>
+                        <p class="lead text-white" id="when12"></p>
+                        <p class="lead text-white" id="when22"></p>
+                    </dd>
+            </dl>
+            </div>
+            <div class="col-md-5">
+            <!-- <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image"> -->
+            <img class="featurette-image rounded img-fluid mx-auto" id="event-img-2">
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette pl-5">
+                <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading text-white" id="event-heading-3"><span class="text-white"></span></h2>
+                <p class="lead text-white" id="event-3"></p>
+                <dl class="row">
+                    <dt class="lead text-white col-sm-1" id="where-3"></dt>
+                        <dd class="col-sm-5">
+                            <p class="lead text-white" id="where03"></p>
+                            <p class="lead text-white" id="where13"></p>
+                            <p class="lead text-white" id="where23"></p>
+                        </dd> 
+                    <dt class="lead text-white col-sm-1" id="when-3"></dt>
+                        <dd class="col-sm-3">
+                            <p class="lead text-white" id="when03"></p>
+                            <p class="lead text-white" id="when13"></p>
+                            <p class="lead text-white" id="when23"></p>
+                        </dd>
+                </dl>
+                </div>
+                <div class="col-md-5 order-md-1">
+                <!-- <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image"> -->
+                <img class="featurette-image rounded-circle img-fluid mx-auto" id="event-img-3">
+                </div>
+            </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette pl-5">
+            <div class="col-md-7">
+            <h2 class="featurette-heading text-white" id="event-heading-4"><span class="text-white"></span></h2>
+            <p class="lead text-white" id="event-4"></p>
+            <dl class="row">
+                <dt class="lead text-white col-sm-1" id="where-4"></dt>
+                    <dd class="col-sm-5">
+                        <p class="lead text-white" id="where04"></p>
+                        <p class="lead text-white" id="where14"></p>
+                        <p class="lead text-white" id="where24"></p>
+                    </dd> 
+                <dt class="lead text-white col-sm-1" id="when-4"></dt>
+                    <dd class="col-sm-3">
+                        <p class="lead text-white" id="when04"></p>
+                        <p class="lead text-white" id="when14"></p>
+                        <p class="lead text-white" id="when24"></p>
+                    </dd>
+            </dl>
+            </div>
+            <div class="col-md-5">
+            <img class="featurette-image rounded img-fluid mx-auto" id="event-img-4">
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette pl-5">
+                <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading text-white" id="event-heading-5"><span class="text-white"></span></h2>
+                <p class="lead text-white" id="event-5"></p>
+                <dl class="row">
+                    <dt class="lead text-white col-sm-1" id="where-5"></dt>
+                        <dd class="col-sm-5">
+                            <p class="lead text-white" id="where05"></p>
+                            <p class="lead text-white" id="where15"></p>
+                            <p class="lead text-white" id="where25"></p>
+                        </dd> 
+                    <dt class="lead text-white col-sm-1" id="when-5"></dt>
+                        <dd class="col-sm-3">
+                            <p class="lead text-white" id="when05"></p>
+                            <p class="lead text-white" id="when15"></p>
+                            <p class="lead text-white" id="when25"></p>
+                        </dd>
+                </dl>
+                </div>
+                <div class="col-md-5 order-md-1">
+                <img class="featurette-image rounded-circle img-fluid mx-auto" id="event-img-5">
+                </div>
+            </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette pl-5">
+            <div class="col-md-7">
+            <h2 class="featurette-heading text-white" id="event-heading-6"><span class="text-white"></span></h2>
+            <p class="lead text-white" id="event-6"></p>
+            <dl class="row">
+                <dt class="lead text-white col-sm-1" id="where-6"></dt>
+                    <dd class="col-sm-5">
+                        <p class="lead text-white" id="where06"></p>
+                        <p class="lead text-white" id="where16"></p>
+                        <p class="lead text-white" id="where26"></p>
+                    </dd> 
+                <dt class="lead text-white col-sm-1" id="when-6"></dt>
+                    <dd class="col-sm-3">
+                        <p class="lead text-white" id="when06"></p>
+                        <p class="lead text-white" id="when16"></p>
+                        <p class="lead text-white" id="when26"></p>
+                    </dd>
+            </dl>
+            </div>
+            <div class="col-md-5">
+            <img class="featurette-image rounded img-fluid mx-auto" id="event-img-6">
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette pl-5">
+                <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading text-white" id="event-heading-7"> <span class="text-white"></span></h2>
+                <p class="lead text-white" id="event-7"></p>
+                <dl class="row">
+                    <dt class="lead text-white col-sm-1" id="where-7"></dt>
+                        <dd class="col-sm-5">
+                            <p class="lead text-white" id="where07"></p>
+                            <p class="lead text-white" id="where17"></p>
+                            <p class="lead text-white" id="where27"></p>
+                        </dd> 
+                    <dt class="lead text-white col-sm-1" id="when-7"></dt>
+                        <dd class="col-sm-3">
+                            <p class="lead text-white" id="when07"></p>
+                            <p class="lead text-white" id="when17"></p>
+                            <p class="lead text-white" id="when27"></p>
+                        </dd>
+                </dl>
+                </div>
+                <div class="col-md-5 order-md-1">
+                <img class="featurette-image rounded-circle img-fluid mx-auto" id="event-img-7">
+                </div>
+            </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette pl-5">
+            <div class="col-md-7">
+            <h2 class="featurette-heading text-white" id="event-heading-8"><span class="text-white"></span></h2>
+            <p class="lead text-white" id="event-8"></p>
+            <dl class="row">
+                <dt class="lead text-white col-sm-1" id="where-8"></dt>
+                    <dd class="col-sm-5">
+                        <p class="lead text-white" id="where08"></p>
+                        <p class="lead text-white" id="where18"></p>
+                        <p class="lead text-white" id="where28"></p>
+                    </dd> 
+                <dt class="lead text-white col-sm-1" id="when-8"></dt>
+                    <dd class="col-sm-3">
+                        <p class="lead text-white" id="when08"></p>
+                        <p class="lead text-white" id="when18"></p>
+                        <p class="lead text-white" id="when28"></p>
+                    </dd>
+            </dl>
+            </div>
+            <div class="col-md-5">
+            <img class="featurette-image rounded img-fluid mx-auto" id="event-img-8">
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette pl-5">
+            <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading text-white" id="event-heading-9"><span class="text-white"></span></h2>
+            <p class="lead text-white" id="event-9"></p>
+            <dl class="row">
+                <dt class="lead text-white col-sm-1" id="where-9"></dt>
+                    <dd class="col-sm-5">
+                        <p class="lead text-white" id="where09"></p>
+                        <p class="lead text-white" id="where19"></p>
+                        <p class="lead text-white" id="where29"></p>
+                    </dd> 
+                <dt class="lead text-white col-sm-1" id=when-9></dt>
+                    <dd class="col-sm-3">
+                        <p class="lead text-white" id="when09"></p>
+                        <p class="lead text-white" id="when19"></p>
+                        <p class="lead text-white" id="when29"></p>
+                    </dd>
+            </dl>
+            </div>
+            <div class="col-md-5 order-md-1">
+            <img class="featurette-image rounded-circle img-fluid mx-auto" id="event-img-9">
+            </div>
+        </div>
+
+    </div>
+    <footer>
+            <div class="pl-5 pt-4 eventful-badge eventful-small">
+                <img src="http://api.eventful.com/images/powered/eventful_58x20.gif"
+                    alt="Local Events, Concerts, Tickets">
+                <p><a href="http://eventful.com/">Events</a> by Eventful</p>
+            </div>
+    </footer>
+
+    <script type="text/javascript" src="events.js"></script>
+   
+    </body>
+</html>
